@@ -18,7 +18,7 @@ public:
         {
             rem=no%10;
             no=no/10;
-            rev=rem+rev*10;
+            rev=rev*10+rem;
         }
         cout<<"\nReverse number is :"<<rev;
     }
