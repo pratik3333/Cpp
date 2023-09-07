@@ -1,47 +1,40 @@
+// 3. WAP to create class name as ConvertToUpper with two functions 
+// void setCharArray(char[]): this function can accept character array as parameter 
+// void convertToUpper(): this function can convert lower case character to upper case 
+// void display(): this function can display string after conversion 
+
 #include<iostream>
 using namespace std;
 
 class ConvertToUpper
 {
 private:
-    char *m;
-    // char mu[90];
+    char *m;  //we created pointer
     
 public:
-   void setCharArray(char ch[])
+   void setCharArray(char ch[]) //created function setCharArray
    {
       m=ch;
     
    }
-   void convertToUpper()
+   void convertToUpper()   //created function convertToUpper
    {
-    int i=0,ck=0;
+    int i=0; //Pratik  
        
         while (m[i]!='\0')
         {
-            if (m[i] >= 'a' && m[i]<='z')
+            if (m[i] >= 'a' && m[i]<='z')  
             {
                 m[i]=m[i]-32;
-                // int as=m[i];
-                // as=as-32;
-                // mu[i]=as;
-                // ck++;
             }
-            // else
-            // {
-            //     mu[i]=m[i];
-            // }
             i++;
         }
-        // mu[i]='\0';
              
    }
    void display()
    {
-        cout<<"\n String is: \n";
+        cout<<"\n converted String is: \n";
         cout<<m;
-        // cout<<mu;
-
         
    }
 };
