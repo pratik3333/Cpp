@@ -4,22 +4,23 @@ using namespace std;
 class gst
 {
 private:
-    float p,q;
+    float p,q,gp;
 public:
-    void getValue(int,int);
+    void getValue(int,int,int);
     void bill();
 };
 
-void gst::getValue(int price,int quantity)
+void gst::getValue(int price,int quantity,int gstpercentage)
 {
    p=price;
    q=quantity;
+   gp=gstpercentage;
 }
 void gst::bill()
 {
     float wg,g,f;
     wg=p*q;
-    g=((p*q)/118)*100;
+    g=((p*q)/(100+gp))*100;
     f=wg-g;
     cout<<"\n with gst is: "<<wg;
     cout<<"\n without gst is: "<<g;
@@ -31,10 +32,10 @@ void gst::bill()
 int main()
 {
     gst gt;
-    int price,quantity;
-    cout<<"\nEnter price and quantity:\n";
-    cin>>price>>quantity;
-    gt.getValue(price,quantity);
+    int price,quantity,gstpercentage;
+    cout<<"\nEnter price and quantity and gst percentage:\n";
+    cin>>price>>quantity>>gstpercentage;
+    gt.getValue(price,quantity,gstpercentage);
     gt.bill();
     
 }
