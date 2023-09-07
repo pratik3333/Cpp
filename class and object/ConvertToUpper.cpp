@@ -5,6 +5,7 @@
 
 #include<iostream>
 using namespace std;
+#include<string.h>
 
 class ConvertToUpper
 {
@@ -44,7 +45,7 @@ int main()
     char ch[90];
     ConvertToUpper cn;
     cout<<"\nEnter string: \n";
-    cin>>ch;
+    gets(ch);
     cn.setCharArray(ch);
     cn.convertToUpper();
     cn.display();

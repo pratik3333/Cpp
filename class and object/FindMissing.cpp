@@ -2,7 +2,7 @@
 #include<unistd.h>
 using namespace std;
 
-// int i,j;
+int i,j;
 
 class FindMissing
 {
@@ -16,7 +16,7 @@ public:
     }
     void getMissing()
     {
-        int i, j;
+        // int i, j;
         int diff = 0;
         for (i = 0; i < 5; i++)
         {
