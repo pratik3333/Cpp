@@ -13,7 +13,6 @@ public:
 void element::setArray(int a[])
 {
     m=a;
-
 }
 void element::getCount()
 {
