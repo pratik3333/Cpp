@@ -12,7 +12,7 @@ private:
     FILE *fptr, *fptr1;
 
 public:
-    void setid()
+    void setProduct(char pname[], int pprice, int quantity)
     {
          count = 0;
         fptr1 = fopen("H:\\Cpp\\File handling\\product\\idstore.txt", "a+");
@@ -23,10 +23,6 @@ public:
         {
             ++count;
         }
-        // return count;
-    }
-    void setProduct(char pname[], int pprice, int quantity)
-    {
 
         cout<<"\nCount is\n"<<count;
 
@@ -41,7 +37,6 @@ public:
         fclose(fptr);
         fclose(fptr1);
         cout << "\nProduct added succesfully.....\n";
-        // count=0;
     }
     void showProduct()
     {
@@ -71,6 +66,7 @@ public:
         }
         fclose(fptr);
     }
+    
     void searchProduct()
     {
         int flag = 0;
@@ -100,7 +96,6 @@ public:
 
 int main()
 {
-
     int choice;
 
     product p;
@@ -120,7 +115,6 @@ int main()
             int pprice, quantity;
             cout << "\nEnter product name, product price and product quantity\n";
             cin >> pname >> pprice >> quantity;
-            p.setid();
             p.setProduct(pname, pprice, quantity);
         }
         break;
